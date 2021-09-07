@@ -28,7 +28,9 @@ git clone git@github.com:shindesharad71/Rails-Book-Library-API.git
 bundle install
 ```
 
-5. Create db and migrate schema
+5. Update database configuration in `config/database.yml` file
+
+6. Create db and migrate schema
 
 ```bash
 rake db:create
@@ -36,7 +38,7 @@ rake db:migrate
 rake db:seed
 ```
 
-6. Now run your application
+7. Now run your application
 
 ```bash
 rails s
