@@ -1,5 +1,7 @@
 # README
 
+API Ref - https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
