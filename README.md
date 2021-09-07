@@ -1,26 +1,46 @@
-# README
+# Book Library API Using Rails
 
-API Ref - https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a
+Basic REST API example created using rails while learning.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation and Setup
 
-Things you may want to cover:
+1. Make sure Ruby is installed on your system. Fire command prompt and run command:
 
-* Ruby version
+```bash
+ruby -v
+```
 
-* System dependencies
+2. Make sure Rails is installed
 
-* Configuration
+```bash
+rails -v
+```
 
-* Database creation
+3. Clone this git repository
 
-* Database initialization
+```bash
+git clone git@github.com:shindesharad71/Rails-Book-Library-API.git
+```
 
-* How to run the test suite
+4. Install all dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+bundle install
+```
 
-* Deployment instructions
+5. Create db and migrate schema
 
-* ...
+```bash
+rake db:create
+rake db:migrate
+rake db:seed
+```
+
+6. Now run your application
+
+```bash
+rails s
+```
+
+
+[credits](https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a)
