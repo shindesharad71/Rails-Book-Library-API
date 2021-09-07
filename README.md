@@ -44,5 +44,9 @@ rake db:seed
 rails s
 ```
 
+```txt
+Open a browser window and go to -  
+http://localhost:3000/api/v1/books/
+```
 
 [credits](https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a)
