@@ -8,63 +8,15 @@
 
 Book.create([
     {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
+        name: 'Things Fall Apart',
+        description: 'Things Fall Apart is the debut novel by Nigerian author Chinua Achebe, first published in 1958. It depicts pre-colonial life in the southeastern part of Nigeria and the arrival of Europeans during the late 19th century.',
+        author: 'Chinua Achebe',
+        release_date: '01/01/1958',
     },
     {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
-    },
-    {
-        name: 'The Lord of the Rings',
-        description: 'The Lord of the Rings',
-        author: 'The Lord of the Rings',
-        release_date: 'The Lord of the Rings',
+        name: 'The Sound of the Mountain',
+        description: 'The Sound of the Mountain (Japanese: 山の音, Hepburn: Yama no oto) is a novel by Japanese writer Yasunari Kawabata, serialized between 1949 and 1954, and first published as a standalone book in 1954 by Chikuma Shobō, Tokyo.',
+        author: 'Yasunari Kawabata',
+        release_date: '01/01/1954',
     }
 ])
