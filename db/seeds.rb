@@ -5,3 +5,66 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Book.create([
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    },
+    {
+        name: 'The Lord of the Rings',
+        description: 'The Lord of the Rings',
+        author: 'The Lord of the Rings',
+        release_date: 'The Lord of the Rings',
+    }
+])
