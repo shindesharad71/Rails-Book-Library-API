@@ -10,3 +10,9 @@ class Api::V1::UsersController < ApplicationController
     def auto_login
         render json: {message: 'auto_login works!'}, status: 200
     end
+
+    private
+    def user_params
+        params.permit(:username, :password, :age)
+    end
+end
