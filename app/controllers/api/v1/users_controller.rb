@@ -1,6 +1,14 @@
 class Api::V1::UsersController < ApplicationController
+    
+    # Register user
     def create
-        render json: {message: 'create works!'}, status: 200
+        @user = User.create(user_params)
+        if @user.valid?
+            token = encode_token(user_id, @user.id)
+            render json: {user: @user, token: token}, status: 201
+        else
+            render json: {error: "Invalid username or password"}
+        end
     end
 
     def login
