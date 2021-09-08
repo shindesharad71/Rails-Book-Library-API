@@ -51,5 +51,5 @@ http://localhost:3000/api/v1/books/
 
 ### Credits
 
-[How to Build an API With Ruby on Rails](https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a)
-[Build a Rails API With JWT](https://betterprogramming.pub/build-a-rails-api-with-jwt-61fb8a52d833)
+1. [How to Build an API With Ruby on Rails](https://medium.com/swlh/how-to-build-an-api-with-ruby-on-rails-28e27d47455a)
+2. [Build a Rails API With JWT](https://betterprogramming.pub/build-a-rails-api-with-jwt-61fb8a52d833)
