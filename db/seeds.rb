@@ -20,3 +20,11 @@ Book.create([
         release_date: '01/01/1954',
     }
 ])
+
+User.create([
+    { 
+        username: 'sharad',
+        password: '12345',
+        age: 27
+    }
+])
