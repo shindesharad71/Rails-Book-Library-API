@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
-    before_action :authorized
+    # before_action :authorized
 
     JWT_SECRET = '8I@={Lfygi#!eFY'
 
