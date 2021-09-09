@@ -12,11 +12,18 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def login
-        render json: {message: 'login works!'}, status: 200
+        @user = User.find_by(username: params[:username])
+
+        if @user && @user.authenticate(params[:password])
+            token = encode_token({user_id: @user.id})
+            render json: {user: @user, token: token}
+        else
+            render json: {error: "Invalid username or password"}
+        end
     end
 
     def auto_login
-        render json: {message: 'auto_login works!'}, status: 200
+        render json: @user
     end
 
     private
