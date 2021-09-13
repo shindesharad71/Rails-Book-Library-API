@@ -16,6 +16,7 @@ class Api::V1::BooksController < ApplicationController
     )
 
     if book.save
+      AddBookWorker.perform_async(prod_params[:name], prod_params[:author])
       render json: book, status: 200
     else
       render json: {error: "Error creating new book record"}
