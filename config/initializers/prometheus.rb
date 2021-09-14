@@ -4,6 +4,8 @@ if Rails.env != "test"
     
     # This reports stats per request like HTTP status and timings
     Rails.application.middleware.unshift PrometheusExporter::Middleware
-    
+
     PrometheusExporter::Instrumentation::DelayedJob.register_plugin
+
+    PrometheusExporter::Instrumentation::Process.start(type: "master")
 end
