@@ -45,7 +45,9 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 
 after_worker_boot do
     require 'prometheus_exporter/instrumentation'
+    
     PrometheusExporter::Instrumentation::Puma.start
+    PrometheusExporter::Instrumentation::ActiveRecord.start
 end
 
 # Allow puma to be restarted by `rails restart` command.
