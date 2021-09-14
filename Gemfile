@@ -44,3 +44,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "prometheus_exporter", "~> 0.7.0"
+gem 'yabeda'
+gem 'yabeda-rails'
+gem 'yabeda-sidekiq'
+gem "yabeda-prometheus"
