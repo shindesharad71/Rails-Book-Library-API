@@ -69,7 +69,6 @@ GEM
     nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    prometheus-client (2.1.0)
     prometheus_exporter (0.7.0)
       webrick
     puma (3.12.6)
@@ -143,7 +142,6 @@ DEPENDENCIES
   jwt (~> 2.2, >= 2.2.3)
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.6.0)
-  prometheus-client
   prometheus_exporter (~> 0.7.0)
   puma (~> 3.0)
   rack-cors

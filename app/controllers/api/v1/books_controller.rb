@@ -1,11 +1,7 @@
 class Api::V1::BooksController < ApplicationController
 
-  include Prometheus::Controller
-
   # Index renders all items from books table
   def index
-    GAUGE_EXAMPLE
-      .set({route: :gauge}, rand(0..100))
     books = Book.all
     render json: books, status: 200
   end
