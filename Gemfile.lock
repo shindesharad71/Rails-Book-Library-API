@@ -70,6 +70,8 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     prometheus-client (2.1.0)
+    prometheus_exporter (0.7.0)
+      webrick
     puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
@@ -127,6 +129,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
+    webrick (1.7.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -141,6 +144,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.6.0)
   prometheus-client
+  prometheus_exporter (~> 0.7.0)
   puma (~> 3.0)
   rack-cors
   rails (~> 5.0.7, >= 5.0.7.1)
