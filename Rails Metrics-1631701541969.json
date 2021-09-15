@@ -1,46 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_PROMETHEUS",
-      "label": "Prometheus",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "prometheus",
-      "pluginName": "Prometheus"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "8.1.3"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph (old)",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "prometheus",
-      "name": "Prometheus",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "stat",
-      "name": "Stat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "table-old",
-      "name": "Table (old)",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -63,10 +21,448 @@
   "editable": true,
   "gnetId": 10306,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1631690214161,
+  "id": 2,
+  "iteration": 1631701288306,
   "links": [],
   "panels": [
+    {
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 55,
+      "title": "P Series Response Time",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 57,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "paceLength": 10,
+      "percentage": false,
+      "pluginVersion": "8.1.3",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "histogram_quantile(0.90, sum(rate(rails_request_duration_seconds_bucket[1m])) by (le,controller,action))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{controller}}#{{action}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Rails 90% response time by endpoint",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 58,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "avg",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "paceLength": 10,
+      "percentage": false,
+      "pluginVersion": "8.1.3",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "histogram_quantile(0.95, sum(rate(rails_request_duration_seconds_bucket[1m])) by (le,controller,action))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{controller}}#{{action}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Rails 95% response time by endpoint",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 59,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "avg",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "paceLength": 10,
+      "percentage": false,
+      "pluginVersion": "8.1.3",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "histogram_quantile(0.99, sum(rate(rails_request_duration_seconds_bucket[1m])) by (le,controller,action))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{controller}}#{{action}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Rails 99% response time by endpoint",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 60,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sort": "avg",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "paceLength": 10,
+      "percentage": false,
+      "pluginVersion": "8.1.3",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "histogram_quantile(0.995, sum(rate(rails_request_duration_seconds_bucket[1m])) by (le,controller,action))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{controller}}#{{action}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Rails 99.5% response time by endpoint",
+      "tooltip": {
+        "shared": true,
+        "sort": 2,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
     {
       "collapsed": false,
       "datasource": null,
@@ -74,7 +470,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 17
       },
       "id": 53,
       "panels": [],
@@ -121,7 +517,7 @@
         "h": 2,
         "w": 3,
         "x": 0,
-        "y": 1
+        "y": 18
       },
       "id": 33,
       "interval": null,
@@ -197,7 +593,7 @@
         "h": 2,
         "w": 3,
         "x": 3,
-        "y": 1
+        "y": 18
       },
       "id": 35,
       "interval": null,
@@ -274,7 +670,7 @@
         "h": 2,
         "w": 3,
         "x": 6,
-        "y": 1
+        "y": 18
       },
       "id": 41,
       "interval": null,
@@ -351,7 +747,7 @@
         "h": 2,
         "w": 3,
         "x": 9,
-        "y": 1
+        "y": 18
       },
       "id": 37,
       "interval": null,
@@ -392,7 +788,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -406,7 +802,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 1
+        "y": 18
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -427,8 +823,9 @@
         "values": true
       },
       "libraryPanel": {
+        "description": "",
         "meta": {
-          "connectedDashboards": 1,
+          "connectedDashboards": 2,
           "created": "2021-09-15T12:36:37+05:30",
           "createdBy": {
             "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
@@ -445,6 +842,7 @@
           }
         },
         "name": "Throughput",
+        "type": "graph",
         "uid": "lBzyrPSnz",
         "version": 1
       },
@@ -524,7 +922,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -538,7 +936,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 3
+        "y": 20
       },
       "hiddenSeries": false,
       "id": 51,
@@ -558,8 +956,9 @@
         "values": true
       },
       "libraryPanel": {
+        "description": "",
         "meta": {
-          "connectedDashboards": 1,
+          "connectedDashboards": 2,
           "created": "2021-09-15T12:37:14+05:30",
           "createdBy": {
             "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
@@ -576,6 +975,7 @@
           }
         },
         "name": "Throughput / Endpoint",
+        "type": "graph",
         "uid": "AnVUrESnz",
         "version": 1
       },
@@ -651,7 +1051,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -665,7 +1065,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 26
       },
       "hiddenSeries": false,
       "id": 47,
@@ -780,7 +1180,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -794,7 +1194,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 11
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 45,
@@ -922,7 +1322,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 36
       },
       "id": 13,
       "panels": [],
@@ -941,7 +1341,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 10,
@@ -1034,7 +1434,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 37
       },
       "hiddenSeries": false,
       "id": 8,
@@ -1126,7 +1526,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 29
+        "y": 46
       },
       "hiddenSeries": false,
       "id": 2,
@@ -1227,7 +1627,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 29
+        "y": 46
       },
       "hiddenSeries": false,
       "id": 31,
@@ -1320,7 +1720,7 @@
         "h": 6,
         "w": 12,
         "x": 0,
-        "y": 35
+        "y": 52
       },
       "hiddenSeries": false,
       "id": 39,
@@ -1419,7 +1819,7 @@
         "h": 6,
         "w": 12,
         "x": 12,
-        "y": 35
+        "y": 52
       },
       "hiddenSeries": false,
       "id": 29,
@@ -1508,7 +1908,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 41
+        "y": 58
       },
       "hideTimeOverride": false,
       "id": 6,
@@ -1597,7 +1997,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 41
+        "y": 58
       },
       "hideTimeOverride": false,
       "id": 11,
@@ -1684,7 +2084,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 51
+        "y": 68
       },
       "id": 20,
       "panels": [],
@@ -1703,7 +2103,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 52
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 21,
@@ -1795,7 +2195,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 52
+        "y": 69
       },
       "hiddenSeries": false,
       "id": 22,
@@ -1887,7 +2287,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 61
+        "y": 78
       },
       "hiddenSeries": false,
       "id": 25,
@@ -1975,7 +2375,7 @@
         "h": 10,
         "w": 6,
         "x": 12,
-        "y": 61
+        "y": 78
       },
       "hideTimeOverride": false,
       "id": 23,
@@ -2066,7 +2466,7 @@
         "h": 10,
         "w": 6,
         "x": 18,
-        "y": 61
+        "y": 78
       },
       "hideTimeOverride": false,
       "id": 24,
@@ -2153,7 +2553,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 71
+        "y": 88
       },
       "id": 15,
       "panels": [],
@@ -2172,7 +2572,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 72
+        "y": 89
       },
       "hiddenSeries": false,
       "id": 4,
@@ -2264,7 +2664,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 72
+        "y": 89
       },
       "hiddenSeries": false,
       "id": 27,
@@ -2357,7 +2757,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 81
+        "y": 98
       },
       "hiddenSeries": false,
       "id": 17,
@@ -2456,7 +2856,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 81
+        "y": 98
       },
       "hiddenSeries": false,
       "id": 18,
@@ -2572,7 +2972,12 @@
       },
       {
         "allValue": null,
-        "current": {},
+        "current": {
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
+        },
         "datasource": "$datasource",
         "definition": "",
         "description": null,
@@ -2598,7 +3003,11 @@
       },
       {
         "allValue": ".*",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": "$datasource",
         "definition": "",
         "description": null,
@@ -2624,7 +3033,11 @@
       },
       {
         "allValue": ".*",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": "$datasource",
         "definition": "",
         "description": null,
@@ -2650,7 +3063,11 @@
       },
       {
         "allValue": ".*",
-        "current": {},
+        "current": {
+          "selected": false,
+          "text": "All",
+          "value": "$__all"
+        },
         "datasource": "$datasource",
         "definition": "label_values(ruby_delayed_jobs_total{kubernetes_namespace=\"$namespace\"},job_name)",
         "description": null,
@@ -2708,5 +3125,5 @@
   "timezone": "browser",
   "title": "Rails Metrics",
   "uid": "j5hbcilmz",
-  "version": 9
+  "version": 13
 }
