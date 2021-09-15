@@ -44,3 +44,13 @@ scrape_configs:
   static_configs:
   - targets:
     - localhost:9100
+- job_name: MySQL Exporter
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  static_configs:
+  - targets:
+    - localhost:9104
