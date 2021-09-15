@@ -1,17 +1,46 @@
 # Prometheus Config
 global:
-  scrape_interval: 15s
-  scrape_timeout: 10s
+  scrape_interval: 5s
+  scrape_timeout: 5s
   evaluation_interval: 1m
 scrape_configs:
-- job_name: prometheus
+- job_name: Prometheus
   honor_timestamps: true
-  scrape_interval: 15s
-  scrape_timeout: 10s
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  static_configs:
+  - targets:
+    - localhost:9090
+- job_name: Yabeda
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
   metrics_path: /metrics
   scheme: http
   follow_redirects: true
   static_configs:
   - targets:
     - localhost:3000
+- job_name: Rails Exporter
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  static_configs:
+  - targets:
     - localhost:9394
+- job_name: Node Exporter
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  static_configs:
+  - targets:
+    - localhost:9100
