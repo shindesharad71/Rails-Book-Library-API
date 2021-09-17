@@ -74,3 +74,13 @@ scrape_configs:
   static_configs:
   - targets:
     - localhost:9114
+- job_name: mongodb_exporter
+  honor_timestamps: true
+  scrape_interval: 5s
+  scrape_timeout: 5s
+  metrics_path: /metrics
+  scheme: http
+  follow_redirects: true
+  static_configs:
+  - targets:
+    - localhost:9216
