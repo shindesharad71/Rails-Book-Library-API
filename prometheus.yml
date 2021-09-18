@@ -64,6 +64,7 @@ scrape_configs:
   static_configs:
   - targets:
     - localhost:9121
+    
 - job_name: elasticsearch_exporter
   honor_timestamps: true
   scrape_interval: 5s
@@ -74,6 +75,7 @@ scrape_configs:
   static_configs:
   - targets:
     - localhost:9114
+
 - job_name: mongodb_exporter
   honor_timestamps: true
   scrape_interval: 5s
