@@ -33,5 +33,25 @@ module Prometheus
         prometheus.register(CUSTOM_GAUGE_METRICS_WITH_LABEL_EXAMPLE)
         # Use
         # CUSTOM_GAUGE_METRICS_WITH_LABEL_EXAMPLE.set(21.534, labels: { room: 'kitchen' })
+
+
+        # 3. Histogram Metrics 
+        # A histogram samples observations (usually things like request durations or response sizes) and counts them in configurable buckets. It also provides a sum of all observed values.
+        # https://github.com/prometheus/client_ruby#histogram
+        # *************************************************************
+        CUSTOM_HISTOGRAM_METRICS_WITH_LABEL_EXAMPLE = Prometheus::Client::Histogram.new(:service_latency_seconds, docstring: 'A service latency hostogram metrics', labels: [:service])
+        prometheus.register(CUSTOM_HISTOGRAM_METRICS_WITH_LABEL_EXAMPLE)
+        # Use - record a value
+        # CUSTOM_HISTOGRAM_METRICS_WITH_LABEL_EXAMPLE.observe(Benchmark.realtime { service.call(arg) }, labels: { service: 'books' })
+
+
+        # 4. Summary Metrics 
+        # Summary, similar to histograms, is an accumulator for samples. It captures Numeric data and provides an efficient percentile calculation mechanism.
+        # https://github.com/prometheus/client_ruby#summary
+        # *************************************************************
+        CUSTOM_SUMMARY_METRICS_WITH_LABEL_EXAMPLE = Prometheus::Client::Summary.new(:service_latency_seconds_summary, docstring: 'A summary metrics example for calculating the latency', labels: [:service])
+        prometheus.register(CUSTOM_SUMMARY_METRICS_WITH_LABEL_EXAMPLE)
+        # Use - record a value
+        # CUSTOM_SUMMARY_METRICS_WITH_LABEL_EXAMPLE.observe(Benchmark.realtime { service.call() }, labels: { service: 'database' })
     end
 end

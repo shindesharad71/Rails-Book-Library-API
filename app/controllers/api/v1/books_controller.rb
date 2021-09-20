@@ -9,6 +9,9 @@ class Api::V1::BooksController < ApplicationController
     CUSTOM_COUNTER_METRICS_EXAMPLE.increment
     CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE.increment(labels: {service: 'book_list'})
     CUSTOM_GAUGE_METRICS_WITH_LABEL_EXAMPLE.set(21.534, labels: { room: 'kitchen' })
+    # TODO: Check This
+    # CUSTOM_HISTOGRAM_METRICS_WITH_LABEL_EXAMPLE.observe(Benchmark.realtime { service.call(arg) }, labels: { service: 'books' })
+    CUSTOM_SUMMARY_METRICS_WITH_LABEL_EXAMPLE.observe(Benchmark.realtime { service.call() }, labels: { service: 'database' })
   end
 
   # Create action will create new book record with given data
