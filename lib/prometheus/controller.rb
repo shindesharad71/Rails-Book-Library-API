@@ -17,7 +17,7 @@ module Prometheus
         # Use
         # CUSTOM_COUNTER_METRICS_EXAMPLE.increment
 
-        # Create a new counter metric
+        # Create a new counter metric with additional data
         CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE = Prometheus::Client::Counter.new(:CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE, docstring: 'A costom counter metric example with additional labels', labels: [:service])
         # Register the metric
         prometheus.register(CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE)
