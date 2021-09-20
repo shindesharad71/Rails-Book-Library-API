@@ -48,3 +48,4 @@ gem 'yabeda'
 gem 'yabeda-rails'
 gem 'yabeda-sidekiq'
 gem "yabeda-prometheus"
+gem "prometheus-client"

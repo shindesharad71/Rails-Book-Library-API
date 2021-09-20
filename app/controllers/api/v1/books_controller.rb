@@ -1,9 +1,12 @@
 class Api::V1::BooksController < ApplicationController
 
+  include Prometheus::Controller
+
   # Index renders all items from books table
   def index
     books = Book.all
     render json: books, status: 200
+    CUSTOM_COUNTER_METRICS_EXAMPLE.increment
   end
 
   # Create action will create new book record with given data
