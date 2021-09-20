@@ -8,6 +8,7 @@ class Api::V1::BooksController < ApplicationController
     render json: books, status: 200
     CUSTOM_COUNTER_METRICS_EXAMPLE.increment
     CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE.increment(labels: {service: 'book_list'})
+    CUSTOM_GAUGE_METRICS_WITH_LABEL_EXAMPLE.set(21.534, labels: { room: 'kitchen' })
   end
 
   # Create action will create new book record with given data
