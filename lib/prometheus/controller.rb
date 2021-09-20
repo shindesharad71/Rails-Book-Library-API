@@ -6,16 +6,23 @@ module Prometheus
 
         # ******************** CUSTOM METRICS *************************
 
-        # 1. Couter Metrics
+        # 1. Couter Metrics - 
+        # https://github.com/prometheus/client_ruby#counter
         # *************************
 
-        # create a new counter metric
-        # More examples - https://github.com/prometheus/client_ruby#counter
+        # Create a new counter metric
         CUSTOM_COUNTER_METRICS_EXAMPLE = Prometheus::Client::Counter.new(:CUSTOM_COUNTER_METRICS_EXAMPLE, docstring: 'A costom counter metric example')
-        # register the metric
+        # Register the metric
         prometheus.register(CUSTOM_COUNTER_METRICS_EXAMPLE)
         # Use
         # CUSTOM_COUNTER_METRICS_EXAMPLE.increment
+
+        # Create a new counter metric
+        CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE = Prometheus::Client::Counter.new(:CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE, docstring: 'A costom counter metric example with additional labels', labels: [:service])
+        # Register the metric
+        prometheus.register(CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE)
+        # Use
+        # CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE.increment(labels: {service: 'service_name'})
 
 
     end

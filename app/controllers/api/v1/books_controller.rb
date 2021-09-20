@@ -7,6 +7,7 @@ class Api::V1::BooksController < ApplicationController
     books = Book.all
     render json: books, status: 200
     CUSTOM_COUNTER_METRICS_EXAMPLE.increment
+    CUSTOM_COUNTER_METRICS_WITH_LABEL_EXAMPLE.increment(labels: {service: 'book_list'})
   end
 
   # Create action will create new book record with given data
