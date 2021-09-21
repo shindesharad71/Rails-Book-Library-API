@@ -25,3 +25,6 @@ Install following exporters -
 1. [Node Exporter](https://github.com/prometheus/node_exporter)
 2. [Prometheus Exporter](https://github.com/discourse/prometheus_exporter)
 3. [MySQLd Exporter](https://github.com/prometheus/mysqld_exporter)
+4. [Redis Exporter](https://github.com/oliver006/redis_exporter)
+5. [MongoDB Exporter](https://github.com/percona/mongodb_exporter)
+6. [Elasticsearch Exporter](https://github.com/prometheus-community/elasticsearch_exporter)
