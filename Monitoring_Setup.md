@@ -39,3 +39,9 @@ Install following exporters -
 Publicly available dashboards can be imported easily. Documentation for importing dashboard using json config can be found on this [link](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard).
 
 Most of the dashboards config are available [here](Dashboards).
+
+
+### 6. Creating Custom Metrics
+
+We can create custom metrics in our application and expose it to Prometheus.
+Exemplars how to create custom metrics are available on this [link](lib/prometheus/controller.rb)
