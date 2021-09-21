@@ -28,3 +28,8 @@ Install following exporters -
 4. [Redis Exporter](https://github.com/oliver006/redis_exporter)
 5. [MongoDB Exporter](https://github.com/percona/mongodb_exporter)
 6. [Elasticsearch Exporter](https://github.com/prometheus-community/elasticsearch_exporter)
+7. [Yabeda](https://github.com/yabeda-rb/yabeda)
+8. [Yabeda Rails](https://github.com/yabeda-rb/yabeda-rails)
+9. [Yabeda Sidekiq](https://github.com/yabeda-rb/yabeda-sidekiq)
+10. [Yabeda Prometheus](https://github.com/yabeda-rb/yabeda-prometheus)
+11. [Prometheus Client](https://github.com/prometheus/client_ruby)
