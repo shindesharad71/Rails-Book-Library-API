@@ -2,6 +2,9 @@
 
 Basic REST API example created using rails while learning.
 
+Added prometheus configuration as well as grafana monitoring.
+Added grafana dashboards
+
 ## Installation and Setup
 
 1. Make sure Ruby is installed on your system. Fire command prompt and run command:
