@@ -11,3 +11,7 @@ For Prometheus config please refer these [file](prometheus.yml)
 ### 2. Install Grafana
 
 Grafana installations and setup instructions are available [here](https://grafana.com/grafana/download)
+
+### 3. Connection to Prometheus
+
+Connect Grafana to Prometheus by referring this [docs](https://prometheus.io/docs/visualization/grafana/)
