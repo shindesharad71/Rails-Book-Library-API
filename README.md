@@ -2,8 +2,8 @@
 
 Basic REST API example created using rails while learning.
 
-Added prometheus configuration as well as grafana monitoring.
-Added grafana dashboards
+* Added prometheus configuration as well as grafana monitoring.
+* Added grafana dashboards.
 
 ## Installation and Setup
 
