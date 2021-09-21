@@ -33,3 +33,9 @@ Install following exporters -
 9. [Yabeda Sidekiq](https://github.com/yabeda-rb/yabeda-sidekiq)
 10. [Yabeda Prometheus](https://github.com/yabeda-rb/yabeda-prometheus)
 11. [Prometheus Client](https://github.com/prometheus/client_ruby)
+
+### 5. Importing Dashboards
+
+Publicly available dashboards can be imported easily. Documentation for importing dashboard using json config can be found on this [link](https://grafana.com/docs/grafana/latest/dashboards/export-import/#import-dashboard).
+
+Most of the dashboards config are available [here](Dashboards).
