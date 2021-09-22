@@ -1,3 +1,4 @@
+# This module to demonstrate custom metrics
 module Prometheus
     module Controller
 
