@@ -64,7 +64,7 @@
   "gnetId": 10306,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1631769377233,
+  "iteration": 1634034674864,
   "links": [],
   "panels": [
     {
@@ -864,30 +864,6 @@
         "total": false,
         "values": true
       },
-      "libraryPanel": {
-        "description": "",
-        "meta": {
-          "connectedDashboards": 2,
-          "created": "2021-09-15T12:36:37+05:30",
-          "createdBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          },
-          "folderName": "General",
-          "folderUid": "",
-          "updated": "2021-09-15T12:36:37+05:30",
-          "updatedBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          }
-        },
-        "name": "Throughput",
-        "type": "graph",
-        "uid": "lBzyrPSnz",
-        "version": 1
-      },
       "lines": true,
       "linewidth": 1,
       "links": [],
@@ -997,30 +973,6 @@
         "total": true,
         "values": true
       },
-      "libraryPanel": {
-        "description": "",
-        "meta": {
-          "connectedDashboards": 2,
-          "created": "2021-09-15T12:37:14+05:30",
-          "createdBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          },
-          "folderName": "General",
-          "folderUid": "",
-          "updated": "2021-09-15T12:37:14+05:30",
-          "updatedBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          }
-        },
-        "name": "Throughput / Endpoint",
-        "type": "graph",
-        "uid": "AnVUrESnz",
-        "version": 1
-      },
       "lines": true,
       "linewidth": 1,
       "links": [],
@@ -1126,30 +1078,6 @@
         "total": false,
         "values": true
       },
-      "libraryPanel": {
-        "description": "",
-        "meta": {
-          "connectedDashboards": 2,
-          "created": "2021-09-15T12:37:26+05:30",
-          "createdBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          },
-          "folderName": "General",
-          "folderUid": "",
-          "updated": "2021-09-15T12:37:26+05:30",
-          "updatedBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          }
-        },
-        "name": "Rails 95% response time by endpoint",
-        "type": "graph",
-        "uid": "SO18rESnz",
-        "version": 1
-      },
       "lines": true,
       "linewidth": 1,
       "links": [],
@@ -1251,30 +1179,6 @@
         "show": true,
         "total": false,
         "values": true
-      },
-      "libraryPanel": {
-        "description": "",
-        "meta": {
-          "connectedDashboards": 2,
-          "created": "2021-09-15T12:36:57+05:30",
-          "createdBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          },
-          "folderName": "General",
-          "folderUid": "",
-          "updated": "2021-09-15T12:36:57+05:30",
-          "updatedBy": {
-            "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "id": 1,
-            "name": "admin"
-          }
-        },
-        "name": "Rails average response time",
-        "type": "graph",
-        "uid": "5ffsrPS7z",
-        "version": 1
       },
       "lines": true,
       "linewidth": 1,
@@ -3150,5 +3054,5 @@
   "timezone": "browser",
   "title": "Rails Metrics",
   "uid": "j5hbcilmz",
-  "version": 13
+  "version": 15
 }
